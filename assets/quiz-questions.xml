@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>  
+	
+		<question>
+			<text>
+				Pick the first option.
+			</text>
+			<choice>First</choice>
+			<choice>Second</choice>
+			<choice>Third</choice>
+			<choice>Fourth</choice>
+
+			<answer>0</answer>
+		</question>
+		<question>
+			<text>
+				Pick the second option.
+			</text>
+			<choice>First</choice>
+			<choice>Second</choice>
+			<choice>Third</choice>
+			<choice>Fourth</choice>
+
+			<answer>1</answer>
+		</question>
+		<question>
+			<text>
+				Pick the third option.
+			</text>
+			<choice>First</choice>
+			<choice>Second</choice>
+			<choice>Third</choice>
+			<choice>Fourth</choice>
+
+			<answer>2</answer>
+		</question>
+	
+	
+</questions>
