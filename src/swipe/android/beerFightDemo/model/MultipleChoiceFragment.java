@@ -1,16 +1,12 @@
 package swipe.android.beerFightDemo.model;
 
-import swipe.android.beerFightDemo.BaseContainerFragment;
 import swipe.android.beerFightDemo.ChangeFragmentInterface;
-import swipe.android.beerFightDemo.Fragment2;
 import swipe.android.beerFightDemo.R;
-import swipe.android.beerFightDemo.TabsAdapter;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.TextView;
+import android.widget.Button;
 
 public class MultipleChoiceFragment extends QuestionFragment {
 	private static final int[] sAnswerButtonIds = new int[] { R.id.answer1,
@@ -27,7 +23,18 @@ public class MultipleChoiceFragment extends QuestionFragment {
 		for (int i = 0; i < sAnswerButtonIds.length; i++)
 			view.findViewById(sAnswerButtonIds[i]).setOnClickListener(
 					new ButtonListener(i));
+Button submit = (Button) view.findViewById(R.id.answer_done);
+submit.setOnClickListener(new OnClickListener(){
 
+	@Override
+	public void onClick(View v) {
+		if(mAnswer == mQuestion.getAnswer()){
+			mAnswer = NO_ANSWER;
+			changer.changeToNextFragment(MultipleChoiceFragment.this);
+		}
+	}
+	
+});
 	}
 
 	@Override
@@ -54,13 +61,16 @@ public class MultipleChoiceFragment extends QuestionFragment {
 			} else {
 				btn.setVisibility(View.GONE);
 			}
+			
+			if(i == mAnswer){
+				btn.setBackgroundColor(Color.RED);
+			}else{
+				btn.setBackgroundColor(Color.BLUE);
+			}
+			//if this is the one we selected, then we should use it
+			//if(mAnswer == btn.get)
 		}
-
-		// check if our answer is correct
-		if (mAnswer == mQuestion.getAnswer()) {
-
-			changer.changeToNextFragment(this);
-		}
+		//mAnswer is our position so we're just going to use that
 	}
 
 	private class ButtonListener implements OnClickListener {

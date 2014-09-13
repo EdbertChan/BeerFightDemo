@@ -3,21 +3,26 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-    <com.animoto.android.views.DraggableGridView
-        android:id="@+id/dgv"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
-    </com.animoto.android.views.DraggableGridView>
+     <org.askerov.dynamicgrid.DynamicGridView
+            android:id="@+id/dynamic_grid"
+            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            />
 
     <TextView
         android:id="@+id/questionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonDoneWord"
+        android:text="Done" >
+    </TextView>
+        <Button
+        android:id="@+id/buttonDoneWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:text="Done" >
-    </TextView>
+    </Button>
 
 </RelativeLayout>

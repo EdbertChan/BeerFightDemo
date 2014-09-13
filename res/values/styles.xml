@@ -18,5 +18,21 @@
         <item name="android:minHeight">0dp</item>
         <item name="android:linksClickable">true</item>
     </style>
+     <style name="button_hilight">
+        <item name="android:background">#FF0000</item>
+        <item name="android:layout_width">fill_parent</item>
+
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:linksClickable">true</item>
+    </style>
 
 </resources>

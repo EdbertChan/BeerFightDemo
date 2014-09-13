@@ -112,7 +112,7 @@ public static final int CHANGE_POSITION = 1;
 
 	public void replace(final int position, final Fragment f) {
 		/* Save the fragment to the history. */
-		mActivity.getSupportFragmentManager().beginTransaction()
+	mActivity.getSupportFragmentManager().beginTransaction()
 				.addToBackStack(null).commit();
 
 		/* Update the tabs. */
